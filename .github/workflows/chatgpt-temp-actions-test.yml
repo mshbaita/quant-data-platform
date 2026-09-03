@@ -1,0 +1,20 @@
+name: ChatGPT temporary actions test
+
+on:
+  push:
+    branches:
+      - chatgpt-temp-actions-test
+    paths:
+      - .github/workflows/chatgpt-temp-actions-test.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test runner
+        run: |
+          echo "runner works"
+          uname -a
